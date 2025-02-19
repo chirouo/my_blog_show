@@ -33,7 +33,9 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    # 不同尺寸站点图标
+    # Different size of favicon
+    favicon: /imgs/icons/favicon.ico
 
     footer:
         since: 2025

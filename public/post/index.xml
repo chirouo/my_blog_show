@@ -13,26 +13,7 @@
         <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/p/git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg" alt="Featured image of post Git学习总结" /&gt;&lt;h2 id=&#34;目录&#34;&gt;目录
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%ae%8f%e8%a7%82git&#34; &gt;宏观git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[git reset 命令](#git reset 命令)&lt;/li&gt;
-&lt;li&gt;[git checkout 命令](#git checkout 命令)&lt;/li&gt;
-&lt;li&gt;[git diff 命令](#git diff 命令)&lt;/li&gt;
-&lt;li&gt;[git stash 命令](#git stash 命令)&lt;/li&gt;
-&lt;li&gt;[git log 命令](#git log 命令)&lt;/li&gt;
-&lt;li&gt;[git cherry-pick 命令](#git cherry-pick 命令)&lt;/li&gt;
-&lt;li&gt;[git rebase 和 git merge 的区别](# git rebase 和 git merge 的区别)&lt;/li&gt;
-&lt;li&gt;[git 多分支开发工作流](#git 多分支开发工作流)
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%9f%ba%e7%a1%80%e6%93%8d%e4%bd%9c&#34; &gt;基础操作&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%88%86%e6%94%af%e7%ae%a1%e7%90%86&#34; &gt;分支管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%b7%a5%e4%bd%9c%e6%b5%81%e7%a8%8b&#34; &gt;工作流程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e8%a7%84%e8%8c%83%e6%a0%87%e5%87%86&#34; &gt;规范标准&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;宏观git&#34;&gt;宏观git
+        <description>&lt;img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg" alt="Featured image of post Git学习总结" /&gt;&lt;h2 id=&#34;宏观git&#34;&gt;宏观git
 &lt;/h2&gt;&lt;p&gt;drop和show可以+栈索引&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219115120890.png&#34;
 	

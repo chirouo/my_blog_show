@@ -17,22 +17,6 @@ tags:
 
 ---
 
-## 目录
-
-- [宏观git](#宏观git)
-- [git reset 命令](#git reset 命令)
-- [git checkout 命令](#git checkout 命令)
-- [git diff 命令](#git diff 命令)
-- [git stash 命令](#git stash 命令)
-- [git log 命令](#git log 命令)
-- [git cherry-pick 命令](#git cherry-pick 命令)
-- [git rebase 和 git merge 的区别](# git rebase 和 git merge 的区别)
-- [git 多分支开发工作流](#git 多分支开发工作流)
-  - [基础操作](#基础操作)
-  - [分支管理](#分支管理)
-  - [工作流程](#工作流程)
-  - [规范标准](#规范标准)
-
 ## 宏观git
 
 drop和show可以+栈索引

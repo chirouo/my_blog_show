@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="马上要做毕设等大项目了，想总结一下Git的常用命令，方便以后所有项目均用Git管理，提高编码效率；同时多设备同步也比较方便。">
+<title>Git学习总结</title>
+
+<link rel='canonical' href='https://example.com/p/git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/'>
+
+<link rel="stylesheet" href="/scss/style.min.e9b51ed5b9a744045f5a24815f6e2eacb3c488154d92d31c3e27ac53306bea8f.css"><meta property='og:title' content="Git学习总结">
+<meta property='og:description' content="马上要做毕设等大项目了，想总结一下Git的常用命令，方便以后所有项目均用Git管理，提高编码效率；同时多设备同步也比较方便。">
+<meta property='og:url' content='https://example.com/p/git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/'>
+<meta property='og:site_name' content='chirou&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Git' /><meta property='article:published_time' content='2025-02-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg' />
+<meta name="twitter:title" content="Git学习总结">
+<meta name="twitter:description" content="马上要做毕设等大项目了，想总结一下Git的常用命令，方便以后所有项目均用Git管理，提高编码效率；同时多设备同步也比较方便。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/xdc_hu_c9436dc860707117.jpg" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">chirou&#39;s blog</a></h1>
+            <h2 class="site-description">努力奋斗</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/chirouo'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于 | about</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E8%81%94-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友联 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#宏观git">宏观git</a></li>
+    <li><a href="#git-reset-命令">git reset 命令</a></li>
+    <li><a href="#git-checkout-命令">git checkout 命令</a></li>
+    <li><a href="#git-diff-命令">git diff 命令</a></li>
+    <li><a href="#git-stash-命令">git stash 命令</a></li>
+    <li><a href="#git-log-命令">git log 命令</a></li>
+    <li><a href="#git-多分支开发工作流git-cherry-pick-命令">git 多分支开发工作流git cherry pick 命令</a></li>
+    <li><a href="#git-rebase-和-git-merge-的区别">git rebase 和 git merge 的区别</a></li>
+    <li><a href="#git-多分支开发工作流">git 多分支开发工作流</a>
+      <ol>
+        <li><a href="#基础操作">基础操作</a></li>
+        <li><a href="#分支管理">分支管理</a></li>
+        <li><a href="#工作流程">工作流程</a></li>
+        <li><a href="#规范标准">规范标准</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
+                
+                    <img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg" loading="lazy" alt="Featured image of post Git学习总结" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B7%A5%E5%85%B7/" style="background-color: #2a9d8f; color: #fff;">
+                工具
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">Git学习总结</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            马上要做毕设等大项目了，想总结一下Git的常用命令，方便以后所有项目均用Git管理，提高编码效率；同时多设备同步也比较方便。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 19, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="目录">目录
+</h2><ul>
+<li><a class="link" href="#%e5%ae%8f%e8%a7%82git" >宏观git</a></li>
+<li>[git reset 命令](#git reset 命令)</li>
+<li>[git checkout 命令](#git checkout 命令)</li>
+<li>[git diff 命令](#git diff 命令)</li>
+<li>[git stash 命令](#git stash 命令)</li>
+<li>[git log 命令](#git log 命令)</li>
+<li>[git cherry-pick 命令](#git cherry-pick 命令)</li>
+<li>[git rebase 和 git merge 的区别](# git rebase 和 git merge 的区别)</li>
+<li>[git 多分支开发工作流](#git 多分支开发工作流)
+<ul>
+<li><a class="link" href="#%e5%9f%ba%e7%a1%80%e6%93%8d%e4%bd%9c" >基础操作</a></li>
+<li><a class="link" href="#%e5%88%86%e6%94%af%e7%ae%a1%e7%90%86" >分支管理</a></li>
+<li><a class="link" href="#%e5%b7%a5%e4%bd%9c%e6%b5%81%e7%a8%8b" >工作流程</a></li>
+<li><a class="link" href="#%e8%a7%84%e8%8c%83%e6%a0%87%e5%87%86" >规范标准</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="宏观git">宏观git
+</h2><p>drop和show可以+栈索引</p>
+<p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219115120890.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<h2 id="git-reset-命令">git reset 命令
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 基本语法</span>
+</span></span><span class="line"><span class="cl">git reset <span class="o">[</span>--soft <span class="p">|</span> --mixed <span class="p">|</span> --hard<span class="o">]</span> <span class="o">[</span>commit_id<span class="o">]</span>
+</span></span><span class="line"><span class="cl">reset默认不加任何参数的时候是--mixed行为
+</span></span><span class="line"><span class="cl"><span class="c1"># 三种模式</span>
+</span></span><span class="line"><span class="cl">--soft   <span class="c1"># 只重置HEAD指针</span>
+</span></span><span class="line"><span class="cl">--mixed  <span class="c1"># 重置HEAD指针和暂存区</span>
+</span></span><span class="line"><span class="cl">--hard   <span class="c1"># 重置HEAD指针、暂存区和工作区</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>&ndash;soft模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --soft HEAD~n
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. 只移动HEAD指针</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 撤销最近n次的提交，但保留所有修改在暂存区中，可以重新提交。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 常用于修改最近的commit信息</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>&ndash;mixed模式（默认）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset <span class="o">[</span>HEAD~n <span class="p">|</span> HEAD fileA<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 或</span>
+</span></span><span class="line"><span class="cl">git reset --mixed <span class="o">[</span>HEAD~n <span class="p">|</span> HEAD fileA<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. 移动HEAD指针</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 重置暂存区到前n次的版本（不会丢失任何更改，只是将文件状态从&#34;已暂存&#34;变回&#34;已修改&#34;，如果指定了文件fileA，就只对这一个文件进行这样的操作）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 保留工作区的修改</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. 常用于合并多个提交</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>&ndash;hard模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --hard HEAD~n
+</span></span><span class="line"><span class="cl"><span class="c1"># 效果：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. 移动HEAD指针</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 重置暂存区和工作区</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 危险操作：会丢失未提交的修改（直接回到前n次的版本，工作区和暂存区都没有任何缓存）</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. 常用于完全放弃最近的提交</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="git-checkout-命令">git checkout 命令
+</h2><p>checkout + 分支，可以切分枝， +文件，可以把工作区的改动撤销</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 切换分支</span>
+</span></span><span class="line"><span class="cl">git checkout branch_name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建并切换分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b new_branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从工作区检出（删除）特定文件</span>
+</span></span><span class="line"><span class="cl">git checkout -- file_name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="git-diff-命令">git diff 命令
+</h2><ul>
+<li>
+<p>使用示例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 比较暂存区和工作区的差异	（工作区有，暂存区没有，显示+）</span>
+</span></span><span class="line"><span class="cl">git diff <span class="o">[</span>-- path/file_name<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 比较版本库和暂存区中的差异	（暂存区有，版本库中没有，显示+）</span>
+</span></span><span class="line"><span class="cl">git diff --cached <span class="o">[</span>-- path/file_name<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 比较版本库和工作区的差异	（工作区有，版本库中没有，显示+）</span>
+</span></span><span class="line"><span class="cl">git diff HEAD <span class="o">[</span>-- path/file_name<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 比较不同提交之间的差异	（to_commit有，from_commit中没有，显示+）</span>
+</span></span><span class="line"><span class="cl">git diff &lt;from_commit&gt; &lt;to_commit&gt; <span class="o">[</span>-- path/file_name<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 比较不同分支之间的差异	（branchA有，branchB中没有，显示+）</span>
+</span></span><span class="line"><span class="cl">git diff main develop
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>最佳实践</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 检查即将提交的内容（即检查版本库和暂存区之间的差异）</span>
+</span></span><span class="line"><span class="cl">git diff --cached
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看完整的修改</span>
+</span></span><span class="line"><span class="cl">git status        <span class="c1"># 先查看文件状态</span>
+</span></span><span class="line"><span class="cl">git diff          <span class="c1"># 查看未暂存的改动（即检查暂存区和工作区之间的差异）</span>
+</span></span><span class="line"><span class="cl">git diff --cached <span class="c1"># 查看已暂存的改动</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>对运行完git diff命令后类似@@ -xxx,x +xxx,x @@的解释</p>
+<p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219151522377.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250219151522377"
+	
+	
+></p>
+</li>
+</ul>
+<h2 id="git-stash-命令">git stash 命令
+</h2><ul>
+<li>
+<p>入栈</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git stash
+</span></span><span class="line"><span class="cl">git stash save <span class="s2">&#34;comment&#34;</span>
+</span></span><span class="line"><span class="cl">git stash push -m（新版本）
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>出栈</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 应用并删除最近的暂存</span>
+</span></span><span class="line"><span class="cl">git stash pop
+</span></span><span class="line"><span class="cl"><span class="c1"># 应用最近的暂存（但是不删除）</span>
+</span></span><span class="line"><span class="cl">git stash apply
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>删除</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 清除栈中所有暂存</span>
+</span></span><span class="line"><span class="cl">git stash clear
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除指定stash_id的暂存</span>
+</span></span><span class="line"><span class="cl">git stash drop stash@<span class="o">{</span>n<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 列出所有暂存</span>
+</span></span><span class="line"><span class="cl">git stash list
+</span></span><span class="line"><span class="cl"><span class="c1"># 展示指定stash_id的暂存</span>
+</span></span><span class="line"><span class="cl">git stash show stash@<span class="o">{</span>n<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="git-log-命令">git log 命令
+</h2><h2 id="git-多分支开发工作流git-cherry-pick-命令">git 多分支开发工作流git cherry pick 命令
+</h2><p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219145455621.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250219145455621"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 第一种</span>
+</span></span><span class="line"><span class="cl">git cherry-pick 4_commit_id
+</span></span><span class="line"><span class="cl"><span class="c1"># 第二种</span>
+</span></span><span class="line"><span class="cl">git cherry-pick 4_commit_id 8_commit_id		merge 4和8 变成 4’和8’后放到当前分支上
+</span></span><span class="line"><span class="cl"><span class="c1"># 第三种</span>
+</span></span><span class="line"><span class="cl">git cherry-pick 4_commit_id..8_commit_id	merge <span class="o">(</span>4, 8<span class="o">]</span>变成<span class="o">(</span>4,8<span class="o">]</span>’后放到当前分支上
+</span></span><span class="line"><span class="cl"><span class="c1"># 第四种</span>
+</span></span><span class="line"><span class="cl">git cherry-pick 4_commit_id^..8_commit_id	merge <span class="o">[</span>4, 8<span class="o">]</span>变成<span class="o">[</span>4,8<span class="o">]</span>’后放到当前分支上
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="git-rebase-和-git-merge-的区别">git rebase 和 git merge 的区别
+</h2><ul>
+<li>
+<p>在main上 git merge develop：</p>
+<p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219123757293.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250219123757293"
+	
+	
+></p>
+</li>
+<li>
+<p>在 main 上 git rebase develop：</p>
+<p>会把develop的<code>4</code>和<code>6</code>节点嫁接到main和develop的公共parent<code>3</code>之后</p>
+<p>再把main在parent<code>3</code>之后的commit节点7 和 5 变成变成<strong>新的commit</strong> <strong>节点</strong><code>7'</code> <code>5'</code>放到develop之后</p>
+<p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/image-20250219123253615.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250219123253615"
+	
+	
+></p>
+<p>git rebase会打乱时间顺序，但是合并之后很清爽，自己舍取优缺点</p>
+</li>
+<li>
+<p>应用场景</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	一个新的需求，就按这个需求开一个新分支，当主分支有新增内容时（其他小伙伴合入代码了），且新增的内容对自己的新代码有影响，那么就rebase下主分支，将主分支的内容同步过来，并解决下自己的代码，比如冲突啥的，适配主分支的新代码。自己的需求开发完毕后，提MR，merge合入到主分支
+</span></span><span class="line"><span class="cl">	尽量不要在公共分支rebase，公共分支例如main，用merge
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="git-多分支开发工作流">git 多分支开发工作流
+</h2><h3 id="基础操作">基础操作
+</h3><ul>
+<li>
+<p>远程仓库操作</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看远程仓库</span>
+</span></span><span class="line"><span class="cl">git remote -v
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看所有分支</span>
+</span></span><span class="line"><span class="cl">git branch -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 更新远程分支信息</span>
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># fetch与pull的区别</span>
+</span></span><span class="line"><span class="cl">git fetch  <span class="c1"># 只下载，不合并</span>
+</span></span><span class="line"><span class="cl">git pull   <span class="c1"># 下载并合并</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="分支管理">分支管理
+</h3><ul>
+<li>
+<p>主要分支结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">main/master    <span class="c1"># 主分支，稳定版本</span>
+</span></span><span class="line"><span class="cl">develop        <span class="c1"># 开发分支</span>
+</span></span><span class="line"><span class="cl">feature/*      <span class="c1"># 功能分支</span>
+</span></span><span class="line"><span class="cl">hotfix/*       <span class="c1"># 修复分支</span>
+</span></span><span class="line"><span class="cl">release/*      <span class="c1"># 发布分支</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>分支命名示例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">feature/login     <span class="c1"># 新功能</span>
+</span></span><span class="line"><span class="cl">hotfix/bug-fix    <span class="c1"># 紧急修复</span>
+</span></span><span class="line"><span class="cl">release/v1.0.0    <span class="c1"># 发布版本</span>
+</span></span><span class="line"><span class="cl">docs/api          <span class="c1"># 文档更新</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="工作流程">工作流程
+</h3><ul>
+<li>
+<p>功能开发流程</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建功能分支</span>
+</span></span><span class="line"><span class="cl">git checkout develop
+</span></span><span class="line"><span class="cl">git checkout -b feature/new-feature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开发并提交</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat: new feature&#34;</span>
+</span></span><span class="line"><span class="cl">git push -u origin feature/new-feature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 完成合并</span>
+</span></span><span class="line"><span class="cl">git checkout develop
+</span></span><span class="line"><span class="cl">git merge feature/new-feature
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>发布流程</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建发布分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b release/v1.0.0 develop
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 完成发布</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git merge release/v1.0.0
+</span></span><span class="line"><span class="cl">git tag v1.0.0
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="规范标准">规范标准
+</h3><ul>
+<li>
+<p>提交信息规范</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">feat: 新功能
+</span></span><span class="line"><span class="cl">fix: 修复bug
+</span></span><span class="line"><span class="cl">docs: 文档更新
+</span></span><span class="line"><span class="cl">style: 格式调整
+</span></span><span class="line"><span class="cl">refactor: 重构
+</span></span><span class="line"><span class="cl">test: 测试相关
+</span></span><span class="line"><span class="cl">chore: 构建/工具
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>最佳实践</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">1. 定期同步上游更新
+</span></span><span class="line"><span class="cl">2. 功能完成提交PR
+</span></span><span class="line"><span class="cl">3. 保持提交信息清晰
+</span></span><span class="line"><span class="cl">4. 及时清理已合并分支
+</span></span><span class="line"><span class="cl">5. 重要节点打Tag标记
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/git/">Git</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 chirou|ewww
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+    
+    <section class="running-time">
+        本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了1篇文章 · 
+        总计0.62k字
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2025-2-18'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 55px;
+    width: 55px;
+    height: 55px;
+    border-radius: 7px;
+    background-color: rgba(64, 158, 255, 0.5);
+    box-shadow: var(--shadow-l2);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #back-to-top:before {
+    content: ' ';
+    display: inline-block;
+    position: relative;
+    top: 0;
+    transform: rotate(135deg);
+    height: 10px;
+    width: 10px;
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover:before {
+    border-color: #2674e0;
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 10px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 40px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 55px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      visibility: hidden;
+    }
+  }
+</style>
+
+
+<script>
+  function backToTop() {
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  window.onload = function () {
+    let scrollTop =
+      this.document.documentElement.scrollTop || this.document.body.scrollTop
+    let totopBtn = this.document.getElementById('back-to-top')
+    if (scrollTop > 0) {
+      totopBtn.style.display = 'inline'
+    } else {
+      totopBtn.style.display = 'none'
+    }
+  }
+
+  window.onscroll = function () {
+    let scrollTop =
+      this.document.documentElement.scrollTop || this.document.body.scrollTop
+    let totopBtn = this.document.getElementById('back-to-top')
+    if (scrollTop < 200) {
+      totopBtn.style.display = 'none'
+    } else {
+      totopBtn.style.display = 'inline'
+      totopBtn.addEventListener('click', backToTop, false)
+    }
+  }
+</script>
+
+    </body>
+</html>

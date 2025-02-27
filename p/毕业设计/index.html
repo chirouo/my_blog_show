@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录我本科毕业设计的过程">
+<title>毕业设计</title>
+
+<link rel='canonical' href='https://example.com/p/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/'>
+
+<link rel="stylesheet" href="/scss/style.min.e9b51ed5b9a744045f5a24815f6e2eacb3c488154d92d31c3e27ac53306bea8f.css"><meta property='og:title' content="毕业设计">
+<meta property='og:description' content="记录我本科毕业设计的过程">
+<meta property='og:url' content='https://example.com/p/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/'>
+<meta property='og:site_name' content='chirou&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg' />
+<meta name="twitter:title" content="毕业设计">
+<meta name="twitter:description" content="记录我本科毕业设计的过程"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg' />
+    <link rel="shortcut icon" href="/imgs/icons/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/xdc_hu_c9436dc860707117.jpg" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">chirou&#39;s blog</a></h1>
+            <h2 class="site-description">努力奋斗</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/chirouo'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于 | about</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E8%81%94-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友联 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#主要功能模块">主要功能模块</a></li>
+    <li><a href="#特点">特点</a></li>
+    <li><a href="#基本概念">基本概念</a></li>
+    <li><a href="#imu的核心传感器">IMU的核心传感器</a></li>
+    <li><a href="#在无人机中的应用">在无人机中的应用</a></li>
+    <li><a href="#代码示例">代码示例</a></li>
+    <li><a href="#数据处理流程">数据处理流程</a></li>
+    <li><a href="#资料">资料</a>
+      <ol>
+        <li><a href="#电调">电调</a></li>
+        <li><a href="#imu姿态传感器">IMU（姿态传感器）</a></li>
+        <li><a href="#气压计">气压计</a></li>
+        <li><a href="#ubw">UBW</a></li>
+        <li><a href="#超声波">超声波</a></li>
+        <li><a href="#无人机遥控器和接受机">无人机遥控器和接受机</a></li>
+        <li><a href="#电池">电池：</a></li>
+        <li><a href="#飞控">飞控</a></li>
+      </ol>
+    </li>
+    <li><a href="#材料选型">材料选型</a>
+      <ol>
+        <li><a href="#电机和桨叶">电机和桨叶</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">
+                
+                    <img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg" loading="lazy" alt="Featured image of post 毕业设计" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" >
+                毕业设计
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            记录我本科毕业设计的过程
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 20, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <ol>
+<li>先搭建一个简单的目标检测demo</li>
+<li>尝试在算力板上部署</li>
+<li>实现算力板和DSP的通信</li>
+<li>最后进行无人机控制系统的开发</li>
+</ol>
+<p>chirouo: 分析下这个项目是做什么的</p>
+<p>Workspace: 正在收集工作区信息正在筛选到最相关的信息</p>
+<p>chirouo: 分析下这个项目是做什么的</p>
+<p>Workspace: 正在收集工作区信息根据代码分析，这是一个飞控系统项目（ANO Pioneer Pro飞控），主要实现无人机/飞行器的姿态控制、导航等功能。具体分析如下:</p>
+<h2 id="主要功能模块">主要功能模块
+</h2><ol>
+<li><strong>姿态传感器校准模块</strong></li>
+</ol>
+<ul>
+<li>在 Ano_Imu_Calibration.c 中实现加速度计和陀螺仪的校准功能</li>
+<li>通过采样 1000 次数据来获取平均值，消除传感器误差</li>
+<li>实现传感器稳定性检测功能</li>
+</ul>
+<ol start="2">
+<li><strong>飞行控制系统</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="o">-</span> <span class="err">姿态控制</span> <span class="p">(</span><span class="n">Ano_AttCtrl</span><span class="p">.</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">定位控制</span> <span class="p">(</span><span class="n">Ano_LocCtrl</span><span class="p">.</span><span class="n">c</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">高度控制</span> <span class="p">(</span><span class="n">Ano_AltCtrl</span><span class="p">.</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">电机控制</span> <span class="p">(</span><span class="n">Ano_MotorCtrl</span><span class="p">.</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">遥控控制</span> <span class="p">(</span><span class="n">Ano_RC</span><span class="p">.</span><span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>传感器驱动</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="o">-</span> <span class="err">光流传感器</span> <span class="p">(</span><span class="n">Ano_OF</span><span class="p">.</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nf">IMU传感器</span> <span class="p">(</span><span class="n">BMI088</span><span class="o">/</span><span class="n">ICM20602</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">气压计</span> <span class="p">(</span><span class="n">SPL06</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="err">磁力计</span> <span class="p">(</span><span class="n">AK8975</span><span class="o">/</span><span class="n">AK09915</span><span class="p">)</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>系统任务调度</strong></li>
+</ol>
+<ul>
+<li>通过 Ano_Scheduler.c 实现多任务调度（当成RTOS用）</li>
+<li>1000Hz、100Hz 等不同频率的任务循环</li>
+</ul>
+<h2 id="特点">特点
+</h2><ol>
+<li>
+<p>使用 STM32F4 系列MCU作为主控芯片</p>
+</li>
+<li>
+<p>支持多种姿态解算:</p>
+</li>
+</ol>
+<ul>
+<li>四元数算法</li>
+<li>陀螺仪积分</li>
+<li>磁力计辅助姿态修正</li>
+</ul>
+<ol start="3">
+<li>丰富的控制模式:</li>
+</ol>
+<ul>
+<li>GPS 定位</li>
+<li>光流定位</li>
+<li>UWB 定位</li>
+<li>视觉跟踪</li>
+</ul>
+<ol start="4">
+<li>完善的教研宝功能和数据下传功能</li>
+</ol>
+<p>总的来说这是一个完整的无人机飞控系统,能够实现稳定的飞行控制、定位导航等功能。核心是通过传感器数据融合来实现对飞行器姿态和位置的精确控制。</p>
+<p>chirouo: 设置一下打开这个文件夹用GB2312编码</p>
+<p>GitHub Copilot: 在 VS Code 中设置 GB2312 编码的步骤如下:</p>
+<ol>
+<li><strong>方法一：通过命令面板</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. 按 Ctrl + Shift + P 打开命令面板
+</span></span><span class="line"><span class="cl">2. 输入 &#34;Change File Encoding&#34;
+</span></span><span class="line"><span class="cl">3. 选择 &#34;重新打开文件编码&#34; 
+</span></span><span class="line"><span class="cl">4. 选择 &#34;GB 2312&#34; 或 &#34;GBK&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>方法二：通过状态栏</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. 点击 VS Code 窗口底部状态栏的 &#34;UTF-8&#34; 按钮
+</span></span><span class="line"><span class="cl">2. 选择 &#34;通过编码重新打开&#34; 
+</span></span><span class="line"><span class="cl">3. 选择 &#34;GB 2312&#34; 或 &#34;GBK&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>方法三：在工作区设置中配置</strong></li>
+</ol>
+<p>在项目根目录创建或编辑 <code>.vscode/settings.json</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;files.encoding&#34;</span><span class="p">:</span> <span class="s2">&#34;gb2312&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;[c]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;files.encoding&#34;</span><span class="p">:</span> <span class="s2">&#34;gb2312&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;[h]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;files.encoding&#34;</span><span class="p">:</span> <span class="s2">&#34;gb2312&#34;</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这将为整个工作区设置默认编码为 GB2312。这样可以保证:</p>
+<ul>
+<li>所有源文件都以 GB2312 编码打开</li>
+<li>中文注释能正确显示</li>
+<li>新建文件默认使用 GB2312 编码</li>
+</ul>
+<p>建议使用方法三,这样可以确保团队成员打开项目时都使用相同的编码设置。</p>
+<p>chirouo: 这个文件命名的每个单词啥意思</p>
+<p>GitHub Copilot: 让我分析下文件名 Ano_Imu_Data.c 中每个单词的含义：</p>
+<ol>
+<li>
+<p><strong>Ano</strong></p>
+<ul>
+<li><code>Ano</code> 是 &ldquo;Anoxia&rdquo;（匿名）的缩写</li>
+<li>这是匿名科创公司的产品标识前缀</li>
+</ul>
+</li>
+<li>
+<p><strong>IMU</strong></p>
+<ul>
+<li><code>IMU</code> = Inertial Measurement Unit</li>
+<li>译为：惯性测量单元</li>
+<li>是飞行器中用于测量角速度和加速度的传感器单元</li>
+<li>通常包含:
+<ul>
+<li>陀螺仪(测量角速度)</li>
+<li>加速度计(测量线性加速度)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data</strong></p>
+<ul>
+<li>表示这个文件处理 IMU 相关的数据</li>
+<li>包含数据采集、处理和计算等功能</li>
+</ul>
+</li>
+</ol>
+<p>主要功能：</p>
+<ul>
+<li>IMU传感器灵敏度初始化</li>
+<li>IMU原始数据获取</li>
+<li>IMU温度数据获取</li>
+<li>IMU数据计算处理(坐标转换、单位转换等)</li>
+</ul>
+<p>综上，这个文件是匿名科创飞控系统中负责处理惯性测量单元(IMU)数据的驱动程序文件。</p>
+<p>chirouo: 什么是imu</p>
+<p>GitHub Copilot: # IMU (惯性测量单元) 详解</p>
+<h2 id="基本概念">基本概念
+</h2><p>IMU (Inertial Measurement Unit) 是一种测量物体三轴姿态角(俯仰、横滚、航向)、角速度和加速度的电子器件。可以理解为一个高精度的&quot;电子罗盘&quot;。</p>
+<h2 id="imu的核心传感器">IMU的核心传感器
+</h2><ol>
+<li>
+<p><strong>陀螺仪</strong></p>
+<ul>
+<li>测量角速度（旋转速度）</li>
+<li>单位：°/s（度/秒）或 rad/s（弧度/秒）</li>
+<li>三轴：pitch(俯仰)、roll(横滚)、yaw(航向)</li>
+</ul>
+</li>
+<li>
+<p><strong>加速度计</strong></p>
+<ul>
+<li>测量线性加速度</li>
+<li>单位：g（重力加速度）或 m/s²</li>
+<li>三轴：X、Y、Z方向的加速度</li>
+</ul>
+</li>
+</ol>
+<h2 id="在无人机中的应用">在无人机中的应用
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">1. 姿态测量
+</span></span><span class="line"><span class="cl">   - 实时获取飞行器的空间姿态
+</span></span><span class="line"><span class="cl">   - 为飞控系统提供姿态反馈
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2. 运动控制
+</span></span><span class="line"><span class="cl">   - 辅助定高、定点飞行
+</span></span><span class="line"><span class="cl">   - 保持飞行稳定性
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3. 导航定位
+</span></span><span class="line"><span class="cl">   - 结合GPS等进行位置估计
+</span></span><span class="line"><span class="cl">   - 实现自主导航功能
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="代码示例">代码示例
+</h2><p>从项目中可以看到IMU相关的核心代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ImuDataCalcu</span><span class="p">(</span><span class="n">u8</span> <span class="n">ins_calibrated</span><span class="p">,</span><span class="n">vec3_f</span> <span class="n">gyrOffset</span><span class="p">,</span><span class="n">vec3_f</span> <span class="n">accOffset</span><span class="p">,</span><span class="kt">float</span> <span class="n">IEM</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 处理陀螺仪数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">st_imuData</span><span class="p">.</span><span class="n">f_gyr_dps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">st_imuData</span><span class="p">.</span><span class="n">f_gyrRaw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">gyrOffset</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">st_imuData</span><span class="p">.</span><span class="n">gyrSensitivity</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 处理加速度计数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">st_imuData</span><span class="p">.</span><span class="n">f_acc_cmpss</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">st_imuData</span><span class="p">.</span><span class="n">f_accRaw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">accOffset</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">st_imuData</span><span class="p">.</span><span class="n">accSensitivity</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="数据处理流程">数据处理流程
+</h2><ol>
+<li>获取原始数据</li>
+<li>消除零偏误差</li>
+<li>单位转换</li>
+<li>坐标系转换</li>
+<li>姿态解算</li>
+<li>输出控制量</li>
+</ol>
+<p>IMU是现代飞行器不可或缺的关键传感器，为飞行器的自主控制提供了基础数据支持。</p>
+<p>chirouo: 现在ANO_PIONEERPRO-088是基于stm32F407的，我想将基于我自己的芯片，把源码里的程序，尤其是驱动部分进行替换，我改如何下手呢@</p>
+<p>GitHub Copilot: 要将 ANO_PioneerPro-088 从 STM32F407 移植到其他芯片平台，建议按以下步骤进行：</p>
+<ol>
+<li><strong>分析项目结构</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">项目主要分为几个层次：
+</span></span><span class="line"><span class="cl">/SRC
+</span></span><span class="line"><span class="cl">  /applications - 应用层
+</span></span><span class="line"><span class="cl">  /drivers - 硬件驱动层 
+</span></span><span class="line"><span class="cl">  /fc_general - 飞控通用功能
+</span></span><span class="line"><span class="cl">  /fc_specific - 飞控特定功能  
+</span></span><span class="line"><span class="cl">  /AnoImu - IMU相关算法
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>重点关注驱动层替换</strong>
+需要重写的核心驱动文件:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="o">/</span><span class="n">SRC</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">Drv_adc</span><span class="p">.</span><span class="n">c</span>       <span class="c1">// ADC驱动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_gpio</span><span class="p">.</span><span class="n">c</span>      <span class="c1">// GPIO驱动  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_i2c</span><span class="p">.</span><span class="n">c</span>       <span class="c1">// I2C驱动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_pwm_out</span><span class="p">.</span><span class="n">c</span>   <span class="c1">// PWM输出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_spi</span><span class="p">.</span><span class="n">c</span>       <span class="c1">// SPI驱动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_time</span><span class="p">.</span><span class="n">c</span>      <span class="c1">// 定时器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">├──</span> <span class="n">Drv_uart</span><span class="p">.</span><span class="n">c</span>      <span class="c1">// 串口通信
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">└──</span> <span class="n">Drv_bsp</span><span class="p">.</span><span class="n">c</span>       <span class="c1">// 板级支持包
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>移植步骤</strong></li>
+</ol>
+<p>(1) 创建硬件抽象层</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// hardware.h
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 定义硬件抽象接口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">gpio_init</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">uart_init</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">spi_init</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...其他硬件接口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="kt">hw_ops_t</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>(2) 实现目标平台的驱动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// your_mcu_driver.c
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;hardware.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">hw_ops_t</span> <span class="n">hw_ops</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">gpio_init</span> <span class="o">=</span> <span class="n">your_gpio_init</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">uart_init</span> <span class="o">=</span> <span class="n">your_uart_init</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">spi_init</span> <span class="o">=</span> <span class="n">your_spi_init</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...实现其他接口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>(3) 修改 BSP 初始化</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Drv_BSP.c
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">BSP_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 替换为新平台的初始化代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hw_ops</span><span class="p">.</span><span class="nf">gpio_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hw_ops</span><span class="p">.</span><span class="nf">uart_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hw_ops</span><span class="p">.</span><span class="nf">spi_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>保持接口兼容</strong></li>
+</ol>
+<p>确保新驱动实现与原有上层代码的接口保持一致:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// 例如 PWM 接口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Drv_PwmOut_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 替换实现,但保持函数名和参数不变
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Drv_PwmOut_Update</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="o">*</span><span class="n">pwm_set</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 替换实现,但保持接口一致
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>
+<p><strong>分步调试</strong></p>
+</li>
+<li>
+<p>先移植基础驱动(GPIO/UART)</p>
+</li>
+<li>
+<p>实现传感器驱动(IMU/气压计等)</p>
+</li>
+<li>
+<p>调试控制算法</p>
+</li>
+<li>
+<p>整体功能测试</p>
+</li>
+<li>
+<p><strong>注意事项</strong></p>
+</li>
+<li>
+<p>保持算法层代码不变</p>
+</li>
+<li>
+<p>关注中断处理的差异</p>
+</li>
+<li>
+<p>确保定时器精度</p>
+</li>
+<li>
+<p>注意传感器时序要求</p>
+</li>
+</ol>
+<p>建议先从小规模测试开始，逐步扩大移植范围，确保每个模块都能正常工作后再整体联调。</p>
+<p>chirouo: 按你说的 如果我先移植简单的GPIO之后该如何调试程序，才知道自己移植成功了呢</p>
+<p>GitHub Copilot: 对于GPIO驱动移植的调试验证，我建议按以下步骤进行：</p>
+<ol>
+<li><strong>创建简单的LED测试程序</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// test_gpio.c
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">LED_Test</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 1. GPIO初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">GPIO_InitTypeDef</span> <span class="n">GPIO_InitStructure</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. 时钟使能 (根据你的芯片修改)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">EnableGPIOClock</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 3. GPIO配置 (根据你的芯片修改)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">GPIO_InitStructure</span><span class="p">.</span><span class="n">GPIO_Pin</span> <span class="o">=</span> <span class="n">LED_PIN</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">GPIO_InitStructure</span><span class="p">.</span><span class="n">GPIO_Mode</span> <span class="o">=</span> <span class="n">GPIO_MODE_OUTPUT</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">GPIO_InitStructure</span><span class="p">.</span><span class="n">GPIO_Speed</span> <span class="o">=</span> <span class="n">GPIO_SPEED_HIGH</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">GPIO_Init</span><span class="p">(</span><span class="n">LED_PORT</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">GPIO_InitStructure</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 4. LED闪烁测试
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GPIO_SetBits</span><span class="p">(</span><span class="n">LED_PORT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">);</span>    <span class="c1">// LED亮
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">Delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>                      <span class="c1">// 延时500ms
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">GPIO_ResetBits</span><span class="p">(</span><span class="n">LED_PORT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">);</span>  <span class="c1">// LED灭
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">Delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>                      <span class="c1">// 延时500ms
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>修改启动代码，只保留最基础功能</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 1. 初始化系统时钟
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">SystemInit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. 初始化延时函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">Delay_Init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 3. 运行LED测试程序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">LED_Test</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 空循环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>调试步骤</strong></li>
+</ol>
+<ul>
+<li>使用示波器检查:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. 测量GPIO输出波形
+</span></span><span class="line"><span class="cl">2. 验证翻转频率是否为1Hz(500ms高电平+500ms低电平)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用逻辑分析仪:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. 捕获GPIO状态变化
+</span></span><span class="line"><span class="cl">2. 验证时序是否正确
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用调试器:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// 设置断点观察:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="mf">1.</span> <span class="n">GPIO初始化函数</span>
+</span></span><span class="line"><span class="cl"><span class="mf">2.</span> <span class="n">GPIO翻转函数</span>
+</span></span><span class="line"><span class="cl"><span class="mf">3.</span> <span class="err">寄存器配置值</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>验证成功的标准</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. LED能够正常闪烁
+</span></span><span class="line"><span class="cl">2. GPIO输出波形符合预期
+</span></span><span class="line"><span class="cl">3. 时序参数满足要求
+</span></span><span class="line"><span class="cl">4. 功耗指标正常
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li><strong>常见问题排查</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">LED不亮</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">检查</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">时钟是否使能</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">GPIO配置是否正确</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">引脚电平是否正确</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">硬件连接是否正常</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">LED不闪烁</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">检查</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">延时函数是否正常</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">主循环是否正常运行</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="err">是否有其他中断干扰</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li><strong>最终验证</strong></li>
+</ol>
+<p>一旦基本GPIO功能验证通过，可以逐步添加:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Progressive_Test</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 1. 基础GPIO功能
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">Test_GPIO_Basic</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. 中断功能
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">Test_GPIO_Interrupt</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 3. 复用功能
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">Test_GPIO_Alternate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 4. 综合测试
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">Test_GPIO_All</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过这种渐进式的测试方法，可以确保GPIO驱动移植的正确性，为后续更复杂外设的移植打下基础。</p>
+<p>chirouo: gyr是什么组件的缩写</p>
+<p>GitHub Copilot: gyr 是 Gyroscope (陀螺仪) 的缩写。</p>
+<p>在这个飞控代码中，BMI088是一个集成了陀螺仪(Gyroscope)和加速度计(Accelerometer)的惯性测量传感器。具体可以看到：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// BMI088相关的GPIO控制函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">DrvGpioCsPinCtrlBmi088Gyr</span><span class="p">(</span><span class="n">u8</span> <span class="n">ena</span><span class="p">)</span>  <span class="c1">// Gyr = Gyroscope 陀螺仪
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="n">ena</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GPIO_ResetBits</span> <span class="p">(</span> <span class="n">BMI088_CSPOT_GYR</span><span class="p">,</span> <span class="n">BMI088_CSPIN_GYR</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GPIO_SetBits</span> <span class="p">(</span> <span class="n">BMI088_CSPOT_GYR</span><span class="p">,</span> <span class="n">BMI088_CSPIN_GYR</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">DrvGpioCsPinCtrlBmi088Acc</span><span class="p">(</span><span class="n">u8</span> <span class="n">ena</span><span class="p">)</span>  <span class="c1">// Acc = Accelerometer 加速度计
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="n">ena</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GPIO_ResetBits</span> <span class="p">(</span> <span class="n">BMI088_CSPOT_ACC</span><span class="p">,</span> <span class="n">BMI088_CSPIN_ACC</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GPIO_SetBits</span> <span class="p">(</span> <span class="n">BMI088_CSPOT_ACC</span><span class="p">,</span> <span class="n">BMI088_CSPIN_ACC</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>陀螺仪(Gyroscope)的主要功能：</p>
+<ol>
+<li>测量角速度</li>
+<li>检测旋转运动</li>
+<li>维持飞行器姿态稳定</li>
+<li>提供航向参考</li>
+</ol>
+<p>在飞控系统中，陀螺仪和加速度计通常配合使用，共同构成IMU(惯性测量单元)，用于实现飞行器的姿态控制。</p>
+<h2 id="资料">资料
+</h2><p><a class="link" href="https://www.bilibili.com/video/BV1mP4y177q3?spm_id_from=333.788.videopod.sections&amp;vd_source=103e76f20d50ad2103b876a6baea65b2"  target="_blank" rel="noopener"
+    >飞控课程（一）：无人机介绍_哔哩哔哩_bilibili</a></p>
+<h3 id="电调">电调
+</h3><p>电机驱动模块，常用的是：正负极输入，UVW三项输出，PWM控制信号输入（PWM信号的频率要参考电调手册）</p>
+<h3 id="imu姿态传感器">IMU（姿态传感器）
+</h3><ul>
+<li>三轴陀螺仪（俯仰角和翻转角）</li>
+<li>三轴加速计（俯仰角和翻转角）</li>
+<li>地磁场传感器（偏航角）</li>
+</ul>
+<h3 id="气压计">气压计
+</h3><h3 id="ubw">UBW
+</h3><h3 id="超声波">超声波
+</h3><h3 id="无人机遥控器和接受机">无人机遥控器和接受机
+</h3><p><img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/202502211014539.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20250221101404340"
+	
+	
+></p>
+<ul>
+<li>将 油门的前后推拉程度 转换成 脉宽（占空比）</li>
+</ul>
+<h3 id="电池">电池：
+</h3><p>一般用锂电池（三元锂、磷酸铁铝，一般用三元锂），能量密度大</p>
+<p>电池在串联的时候电压会增加，但容量不增加，放电倍率（即电流）不会增加</p>
+<p>电池在并联的时候电压不会增加，但容量会增加，放电倍率（即电流）会增加</p>
+<h3 id="飞控">飞控
+</h3><p>固定翼飞机不需要飞控，但是多旋翼无人机，人不可能一次性控制多个机翼，因此需要交给飞控去进行姿态控制</p>
+<p>飞控课程47:57 / 55:05 介绍四个电机如何旋转 才能 让 无人机 上下 前后 翻转 以及最难的左右偏航。</p>
+<ul>
+<li>
+<p>进动扭矩相关知识：左右偏航是反扭矩互相抵消，四旋翼一定是对角电机旋转方向相同（这样的话两对角电机即使转速不一样无人机的平衡也不会受阻）</p>
+<p>如果向右偏航，就是右对角电机（逆时针转）转速上升，左对角电机（顺时针转）转速下</p>
+</li>
+</ul>
+<p>飞控接受控制信号，转换成电调信号，电调再控制电机</p>
+<p>飞控接受的控制信号有下面几种</p>
+<ul>
+<li>遥控器最原始数据：油门、翻转、左右偏航、前后</li>
+<li>直接告诉飞控 往前、后、左、右、上、下、翻转</li>
+<li>通过传感器直接告诉无人机，你的位置在哪，建模，给个（x,y,z)坐标，直接飞过去</li>
+</ul>
+<h2 id="材料选型">材料选型
+</h2><h3 id="电机和桨叶">电机和桨叶
+</h3><p>大KV配小桨叶，小KV配大桨叶</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E6%97%A0%E4%BA%BA%E7%B3%BB%E7%BB%9F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg" loading="lazy" data-key="" data-hash="https://raw.githubusercontent.com/chirouo/my_blog_img/main/xdc1.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕业设计-无人系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 chirou|ewww
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+    
+    <section class="running-time">
+        本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了4篇文章 · 
+        总计1.84k字
+    </section>
+
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script>
+    let s1 = '2025-2-18'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 55px;
+    width: 55px;
+    height: 55px;
+    border-radius: 7px;
+    background-color: rgba(64, 158, 255, 0.5);
+    box-shadow: var(--shadow-l2);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #back-to-top:before {
+    content: ' ';
+    display: inline-block;
+    position: relative;
+    top: 0;
+    transform: rotate(135deg);
+    height: 10px;
+    width: 10px;
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover:before {
+    border-color: #2674e0;
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 10px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 40px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 20px;
+      right: 55px;
+    }
+  }
+
+   
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      visibility: hidden;
+    }
+  }
+</style>
+
+
+<script>
+  function backToTop() {
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
+  window.onload = function () {
+    let scrollTop =
+      this.document.documentElement.scrollTop || this.document.body.scrollTop
+    let totopBtn = this.document.getElementById('back-to-top')
+    if (scrollTop > 0) {
+      totopBtn.style.display = 'inline'
+    } else {
+      totopBtn.style.display = 'none'
+    }
+  }
+
+  window.onscroll = function () {
+    let scrollTop =
+      this.document.documentElement.scrollTop || this.document.body.scrollTop
+    let totopBtn = this.document.getElementById('back-to-top')
+    if (scrollTop < 200) {
+      totopBtn.style.display = 'none'
+    } else {
+      totopBtn.style.display = 'inline'
+      totopBtn.addEventListener('click', backToTop, false)
+    }
+  }
+</script>
+
+    </body>
+</html>

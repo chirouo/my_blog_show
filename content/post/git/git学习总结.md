@@ -295,4 +295,14 @@ git cherry-pick 4_commit_id^..8_commit_id	merge [4, 8]变成[4,8]’后放到当
   5. 重要节点打Tag标记
   ```
 
-  
+
+## 查看本地分支和远程分支对应关系
+
+```bash
+# 这会显示：
+# 所有远程分支
+# 每个本地分支跟踪的远程分支
+# 哪些分支需要同步
+git remote show origin
+```
+

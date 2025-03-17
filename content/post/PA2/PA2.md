@@ -116,3 +116,25 @@ tags:
   ```
 
 总结：x86上端序是从低到高 小端序；c语言编译器决定位域，位域一般也是从低到高（先声明变量的在低位，后声明的在高位）
+
+## 指令周期
+
+```
+取指 --> 译码（操作码译码和操作数译码）--> 执行
+cmd_c() 
+--> cpu_exec(uint64_t n)  
+--> execute(uint64_t n) 
+--> exec_once(Decode *s, vaddr_t pc) 
+--> isa_exec_once(Decode *s)//进入 riscv_32
+--> inst_fetch(vaddr_t *pc, int len)
+    decode_exec(Decode *s)
+--> #define INSTPAT_START(name) { const void * __instpat_end = &&concat(__instpat_end_, name);
+--> INSTPAT("??????? ????? ????? ??? ????? 00101 11", auipc  , U, R(rd) = s->pc + imm);
+--> pattern_decode(pattern, STRLEN(pattern), &key, &mask, &shift);
+    INSTPAT_MATCH(s, ##__VA_ARGS__);
+    	--> decode_operand(s, &rd, &src1, &src2, &imm, concat(TYPE_, type));
+    		__VA_ARGS__ ;
+--> #define INSTPAT_END(name)   concat(__instpat_end_, name): ; }
+--> R(0) = 0;
+```
+

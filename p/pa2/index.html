@@ -253,6 +253,7 @@
         <li><a href="#端序和位域">端序和位域</a></li>
       </ol>
     </li>
+    <li><a href="#指令周期">指令周期</a></li>
   </ol>
 </nav>
         </div>
@@ -530,7 +531,46 @@
 </div></li>
 </ul>
 <p>总结：x86上端序是从低到高 小端序；c语言编译器决定位域，位域一般也是从低到高（先声明变量的在低位，后声明的在高位）</p>
-
+<h2 id="指令周期">指令周期
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">取指</span> <span class="o">--&gt;</span> <span class="err">译码（操作码译码和操作数译码）</span><span class="o">--&gt;</span> <span class="err">执行</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmd_c</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">cpu_exec</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">n</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">execute</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">n</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">exec_once</span><span class="p">(</span><span class="n">Decode</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="n">vaddr_t</span> <span class="n">pc</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">isa_exec_once</span><span class="p">(</span><span class="n">Decode</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="o">//</span><span class="err">进入</span> <span class="n">riscv_32</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">inst_fetch</span><span class="p">(</span><span class="n">vaddr_t</span> <span class="o">*</span><span class="n">pc</span><span class="p">,</span> <span class="ne">int</span> <span class="n">len</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">decode_exec</span><span class="p">(</span><span class="n">Decode</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="c1">#define INSTPAT_START(name) { const void * __instpat_end = &amp;&amp;concat(__instpat_end_, name);</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">INSTPAT</span><span class="p">(</span><span class="s2">&#34;??????? ????? ????? ??? ????? 00101 11&#34;</span><span class="p">,</span> <span class="n">auipc</span>  <span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">R</span><span class="p">(</span><span class="n">rd</span><span class="p">)</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">pc</span> <span class="o">+</span> <span class="n">imm</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">pattern_decode</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">STRLEN</span><span class="p">(</span><span class="n">pattern</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mask</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">shift</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">INSTPAT_MATCH</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="c1">##__VA_ARGS__);</span>
+</span></span><span class="line"><span class="cl">    	<span class="o">--&gt;</span> <span class="n">decode_operand</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rd</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">src1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">src2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">imm</span><span class="p">,</span> <span class="n">concat</span><span class="p">(</span><span class="n">TYPE_</span><span class="p">,</span> <span class="n">type</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    		<span class="n">__VA_ARGS__</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="c1">#define INSTPAT_END(name)   concat(__instpat_end_, name): ; }</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="n">R</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -648,8 +688,10 @@
         
             
         
-        发表了4篇文章 · 
-        总计1.84k字
+            
+        
+        发表了5篇文章 · 
+        总计2.06k字
     </section>
 
 

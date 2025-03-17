@@ -47,6 +47,8 @@
     <loc>https://example.com/archives/</loc>
     <lastmod>2025-02-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://example.com/p/</loc>
+  </url><url>
     <loc>https://example.com/about/</loc>
   </url><url>
     <loc>https://example.com/search/</loc>

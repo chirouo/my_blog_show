@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="多媒体相关技术总结 1. MIPI（Mobile Industry Processor Interface） 定义：一组用于移动设备的硬件接口标准。 作用：主要用于摄像头（CSI）、显示屏（DSI）等设备的连接。 应用：智能手机、平板电脑等移动设备。 2. RTSP（Real-Time Streaming Protocol） 定义：一种网络流媒体传输协议。 作用：用于控制实时音视频流的传输（如播放、暂停、快进）。 应用：视频监控、直播等场景。 3. FFmpeg 定义：开源的多媒体处理框架。 作用：支持音视频的编解码、转码、流媒体处理等。 工具：ffmpeg（命令行工具）、ffplay（播放器）、ffprobe（分析工具）。 4. MP4（MPEG-4 Part 14） 定义：一种常见的音视频容器格式。 特点：支持多种编码格式（如 H.264、AAC），文件体积较小。 应用：视频文件、流媒体等。 5. AVI（Audio Video Interleave） 定义：一种较老的音视频容器格式。 特点：兼容性较好，但文件体积通常较大。 应用：早期视频存储。 6. H.264/H.265 定义：视频编码标准。 作用：压缩视频数据，减少文件体积，保持高画质。 应用：广泛应用于视频编码。 7. ONVIF（Open Network Video Interface Forum） 定义：一种网络视频设备的标准协议。 作用：实现不同厂商的网络摄像头和视频管理系统的互操作性。 应用：视频监控。 8. RTP（Real-time Transport Protocol） 定义：一种用于实时音视频数据传输的协议。 作用：通常与 RTSP 配合使用，RTSP 负责控制，RTP 负责传输。 应用：实时音视频流传输。 9. HDMI（High-Definition Multimedia Interface） 定义：一种高清音视频接口标准。 作用：用于连接显示器、电视等设备，传输高清音视频信号。 应用：消费电子设备。 10. GStreamer 定义：开源的多媒体处理框架。 作用：支持音视频的采集、处理、播放等。 应用：多媒体处理，可替代 FFmpeg。 11. WebRTC（Web Real-Time Communication） 定义：一种支持浏览器实时音视频通信的技术。 作用：用于视频会议、直播等场景。 应用：Web 环境下的实时通信。 12. FLV（Flash Video） 定义：一种用于网络流媒体的视频容器格式。 特点：适用于早期的网络视频播放。 应用：网络流媒体。 技术关系图 1 2 3 4 5 6 7 MIPI（硬件接口） → 采集图像数据 ↓ FFmpeg（处理工具） → 编码、转码、流处理 ↓ RTSP/RTP（传输协议） → 实时音视频流传输 ↓ MP4/AVI（存储格式） → 存储音视频数据 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2月 转眼二月份要过去了 前半个月旅游 看了一眼香港、深圳，感慨香港真的好小，深圳真的好大，东西真的好贵，赚钱不容易，这几天就花了3000 4000。\n后半个月要开题答辩，无人机我做不出来，很内耗，和秦老师沟通换了题目，秦老师还给我发钱，实际上我啥都没干啊，祺神比我多一倍，人家干的多。\n3月 转眼3月份到底了，今天是3.24，这个月也啥都没干，但是313发生了一件重要的事情。希望我以后能撑起我和qdx的这个小家，她真的是一个宝藏女孩，千万不能把她弄丢了，又浑浑噩噩了一个月，想想这半年来全在玩我也得振作起来了。\n315开始了，坚持了一周的跑步，带着qdx减肥以及我自己5月份也有一个马拉松，主要是锻炼身体吧，减肥都是次要的我觉得。\n组会汇报了一坨，fcnn太老了，组会似乎不能汇报自己的工作，得汇报一个问题，让曾老师和师兄们帮忙看看 解答解答，得多看文献了而且必须是最新的文献。看文献 我能看懂英文的情况下，就尽量别去看中文了。\n4月 况老师的两个综述作业：人机交互技术、复杂网络理论及其应用 结课小论文 入团申请书 fuck\n第一周 \u200b\t不知道为啥，想写一个小周报了，上周整体来说还行，但是周四到周日清明假期玩了四天，毕设有了个大概的方向，继续这样的节奏吧：科研上第二周继续找一篇论文，继续复现；然后毕设三天内吧，把小车先拼出来，因为4.18就要中期答辩了；集创赛目前4月15左右也得有一个大概的想法了，得开始做了；摩托车驾照也是4.15；然后得减肥了，上周库库吃了好多。不知道一生一芯啥时候能开始啊。\n\u200b\tqdx依旧是个好女孩，她教会了我很多，我成长了很多和她在一起之后，发现了身上很多很多缺点；首当其冲的就是冲动，做事情太急，太浮躁，在她家的那几天，明显感觉自己喜欢甩锅，不从自己身上找原因，喜欢急，干任何事情太急躁，一旦事情脱离自己目标设想的那样立马就开始崩溃 难受，太追求完美。\n\u200b\t经济上，最近真的穷，在思考租到7月份就不租了，实在是扛不住\n第二周+第三周部分 科研上：就做红外可见光融合了参考知乎up主星辰的回答:\n1 我觉得博士不应该考虑有没有前途，而是好不好毕业，博士毕业主要是发的小论文，要有多少篇二区及以上。目前这个领域稍微有些卷了，没前两年那么容易水一二区了，要想发一二区，也得有大量的实验和足够的创新性，我觉得上手起来还是比大部分任务要简单的。就算你不做这个方向，这个方向的很多新论文的方法和思想也可以给其他视觉任务启发。 2.博士主要是4到5个研究点，分别对应4到5篇小论文，最好有所规划，比如说AE、CNN、GAN、Transformer架构分别来一篇，研究点也最好往不同架构的特点考虑。比如说AE可以跟迁移学习结合，或者研究更有效的融合策略。CNN考虑更轻量级网络模型设计。GAN考虑其他类型的鉴别器。Transformer和mamba也可以考虑轻量级网络方面，更符合的没想到。还有联合免配准、低光增强、去雨去雾去噪等前置任务，还可以联合目标检测、语义分割、深度检测、边缘检测等后续任务，来做多任务融合。其他的多看看别的任务，还有啥启发。还可以做图像融合统一架构(红外与可见光，医学图像，多聚焦图像，多曝光图像，偏振图像等) 3.先从综述论文开始看，然后收集现有的开源代码和数据集和评价指标代码。 先看github项目：https://github.com/RollingPlain/IVIF_ZOO.的paper\n结合博客图像融合论文及代码整理最全大合集-CSDN博客去复现论文\n感情上，感觉越来越离不开qdx了，和她一起抱着睡觉很舒服，晚上回出租屋发现她不在的时候真的很空虚\n毕设：上周玩了好几天，周四周五周六周日都在玩，但是把小车做出来了，接下来就是通信问题，能否让算能和小车通信（想做一个怎样的联合任务？通信了之后做什么？）这是目前主要的。\n秦老师说要努力，博士毕业要六篇论文，3sci+3篇差一些的文章，得努力啊，一周上七天班吧。\n不过摩托车证考过了，很爽哈哈，但是不想骑摩托了，太累 而且太危险，当务之急是如何毕业，而不是这些东西了，不能再想开车了，得收收心\n">
 <title></title>
 
 <link rel='canonical' href='https://example.com/p/'>
 
 <link rel="stylesheet" href="/scss/style.min.e9b51ed5b9a744045f5a24815f6e2eacb3c488154d92d31c3e27ac53306bea8f.css"><meta property='og:title' content="">
-<meta property='og:description' content="多媒体相关技术总结 1. MIPI（Mobile Industry Processor Interface） 定义：一组用于移动设备的硬件接口标准。 作用：主要用于摄像头（CSI）、显示屏（DSI）等设备的连接。 应用：智能手机、平板电脑等移动设备。 2. RTSP（Real-Time Streaming Protocol） 定义：一种网络流媒体传输协议。 作用：用于控制实时音视频流的传输（如播放、暂停、快进）。 应用：视频监控、直播等场景。 3. FFmpeg 定义：开源的多媒体处理框架。 作用：支持音视频的编解码、转码、流媒体处理等。 工具：ffmpeg（命令行工具）、ffplay（播放器）、ffprobe（分析工具）。 4. MP4（MPEG-4 Part 14） 定义：一种常见的音视频容器格式。 特点：支持多种编码格式（如 H.264、AAC），文件体积较小。 应用：视频文件、流媒体等。 5. AVI（Audio Video Interleave） 定义：一种较老的音视频容器格式。 特点：兼容性较好，但文件体积通常较大。 应用：早期视频存储。 6. H.264/H.265 定义：视频编码标准。 作用：压缩视频数据，减少文件体积，保持高画质。 应用：广泛应用于视频编码。 7. ONVIF（Open Network Video Interface Forum） 定义：一种网络视频设备的标准协议。 作用：实现不同厂商的网络摄像头和视频管理系统的互操作性。 应用：视频监控。 8. RTP（Real-time Transport Protocol） 定义：一种用于实时音视频数据传输的协议。 作用：通常与 RTSP 配合使用，RTSP 负责控制，RTP 负责传输。 应用：实时音视频流传输。 9. HDMI（High-Definition Multimedia Interface） 定义：一种高清音视频接口标准。 作用：用于连接显示器、电视等设备，传输高清音视频信号。 应用：消费电子设备。 10. GStreamer 定义：开源的多媒体处理框架。 作用：支持音视频的采集、处理、播放等。 应用：多媒体处理，可替代 FFmpeg。 11. WebRTC（Web Real-Time Communication） 定义：一种支持浏览器实时音视频通信的技术。 作用：用于视频会议、直播等场景。 应用：Web 环境下的实时通信。 12. FLV（Flash Video） 定义：一种用于网络流媒体的视频容器格式。 特点：适用于早期的网络视频播放。 应用：网络流媒体。 技术关系图 1 2 3 4 5 6 7 MIPI（硬件接口） → 采集图像数据 ↓ FFmpeg（处理工具） → 编码、转码、流处理 ↓ RTSP/RTP（传输协议） → 实时音视频流传输 ↓ MP4/AVI（存储格式） → 存储音视频数据 ">
+<meta property='og:description' content="2月 转眼二月份要过去了 前半个月旅游 看了一眼香港、深圳，感慨香港真的好小，深圳真的好大，东西真的好贵，赚钱不容易，这几天就花了3000 4000。\n后半个月要开题答辩，无人机我做不出来，很内耗，和秦老师沟通换了题目，秦老师还给我发钱，实际上我啥都没干啊，祺神比我多一倍，人家干的多。\n3月 转眼3月份到底了，今天是3.24，这个月也啥都没干，但是313发生了一件重要的事情。希望我以后能撑起我和qdx的这个小家，她真的是一个宝藏女孩，千万不能把她弄丢了，又浑浑噩噩了一个月，想想这半年来全在玩我也得振作起来了。\n315开始了，坚持了一周的跑步，带着qdx减肥以及我自己5月份也有一个马拉松，主要是锻炼身体吧，减肥都是次要的我觉得。\n组会汇报了一坨，fcnn太老了，组会似乎不能汇报自己的工作，得汇报一个问题，让曾老师和师兄们帮忙看看 解答解答，得多看文献了而且必须是最新的文献。看文献 我能看懂英文的情况下，就尽量别去看中文了。\n4月 况老师的两个综述作业：人机交互技术、复杂网络理论及其应用 结课小论文 入团申请书 fuck\n第一周 \u200b\t不知道为啥，想写一个小周报了，上周整体来说还行，但是周四到周日清明假期玩了四天，毕设有了个大概的方向，继续这样的节奏吧：科研上第二周继续找一篇论文，继续复现；然后毕设三天内吧，把小车先拼出来，因为4.18就要中期答辩了；集创赛目前4月15左右也得有一个大概的想法了，得开始做了；摩托车驾照也是4.15；然后得减肥了，上周库库吃了好多。不知道一生一芯啥时候能开始啊。\n\u200b\tqdx依旧是个好女孩，她教会了我很多，我成长了很多和她在一起之后，发现了身上很多很多缺点；首当其冲的就是冲动，做事情太急，太浮躁，在她家的那几天，明显感觉自己喜欢甩锅，不从自己身上找原因，喜欢急，干任何事情太急躁，一旦事情脱离自己目标设想的那样立马就开始崩溃 难受，太追求完美。\n\u200b\t经济上，最近真的穷，在思考租到7月份就不租了，实在是扛不住\n第二周+第三周部分 科研上：就做红外可见光融合了参考知乎up主星辰的回答:\n1 我觉得博士不应该考虑有没有前途，而是好不好毕业，博士毕业主要是发的小论文，要有多少篇二区及以上。目前这个领域稍微有些卷了，没前两年那么容易水一二区了，要想发一二区，也得有大量的实验和足够的创新性，我觉得上手起来还是比大部分任务要简单的。就算你不做这个方向，这个方向的很多新论文的方法和思想也可以给其他视觉任务启发。 2.博士主要是4到5个研究点，分别对应4到5篇小论文，最好有所规划，比如说AE、CNN、GAN、Transformer架构分别来一篇，研究点也最好往不同架构的特点考虑。比如说AE可以跟迁移学习结合，或者研究更有效的融合策略。CNN考虑更轻量级网络模型设计。GAN考虑其他类型的鉴别器。Transformer和mamba也可以考虑轻量级网络方面，更符合的没想到。还有联合免配准、低光增强、去雨去雾去噪等前置任务，还可以联合目标检测、语义分割、深度检测、边缘检测等后续任务，来做多任务融合。其他的多看看别的任务，还有啥启发。还可以做图像融合统一架构(红外与可见光，医学图像，多聚焦图像，多曝光图像，偏振图像等) 3.先从综述论文开始看，然后收集现有的开源代码和数据集和评价指标代码。 先看github项目：https://github.com/RollingPlain/IVIF_ZOO.的paper\n结合博客图像融合论文及代码整理最全大合集-CSDN博客去复现论文\n感情上，感觉越来越离不开qdx了，和她一起抱着睡觉很舒服，晚上回出租屋发现她不在的时候真的很空虚\n毕设：上周玩了好几天，周四周五周六周日都在玩，但是把小车做出来了，接下来就是通信问题，能否让算能和小车通信（想做一个怎样的联合任务？通信了之后做什么？）这是目前主要的。\n秦老师说要努力，博士毕业要六篇论文，3sci+3篇差一些的文章，得努力啊，一周上七天班吧。\n不过摩托车证考过了，很爽哈哈，但是不想骑摩托了，太累 而且太危险，当务之急是如何毕业，而不是这些东西了，不能再想开车了，得收收心\n">
 <meta property='og:url' content='https://example.com/p/'>
 <meta property='og:site_name' content='chirou&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="多媒体相关技术总结 1. MIPI（Mobile Industry Processor Interface） 定义：一组用于移动设备的硬件接口标准。 作用：主要用于摄像头（CSI）、显示屏（DSI）等设备的连接。 应用：智能手机、平板电脑等移动设备。 2. RTSP（Real-Time Streaming Protocol） 定义：一种网络流媒体传输协议。 作用：用于控制实时音视频流的传输（如播放、暂停、快进）。 应用：视频监控、直播等场景。 3. FFmpeg 定义：开源的多媒体处理框架。 作用：支持音视频的编解码、转码、流媒体处理等。 工具：ffmpeg（命令行工具）、ffplay（播放器）、ffprobe（分析工具）。 4. MP4（MPEG-4 Part 14） 定义：一种常见的音视频容器格式。 特点：支持多种编码格式（如 H.264、AAC），文件体积较小。 应用：视频文件、流媒体等。 5. AVI（Audio Video Interleave） 定义：一种较老的音视频容器格式。 特点：兼容性较好，但文件体积通常较大。 应用：早期视频存储。 6. H.264/H.265 定义：视频编码标准。 作用：压缩视频数据，减少文件体积，保持高画质。 应用：广泛应用于视频编码。 7. ONVIF（Open Network Video Interface Forum） 定义：一种网络视频设备的标准协议。 作用：实现不同厂商的网络摄像头和视频管理系统的互操作性。 应用：视频监控。 8. RTP（Real-time Transport Protocol） 定义：一种用于实时音视频数据传输的协议。 作用：通常与 RTSP 配合使用，RTSP 负责控制，RTP 负责传输。 应用：实时音视频流传输。 9. HDMI（High-Definition Multimedia Interface） 定义：一种高清音视频接口标准。 作用：用于连接显示器、电视等设备，传输高清音视频信号。 应用：消费电子设备。 10. GStreamer 定义：开源的多媒体处理框架。 作用：支持音视频的采集、处理、播放等。 应用：多媒体处理，可替代 FFmpeg。 11. WebRTC（Web Real-Time Communication） 定义：一种支持浏览器实时音视频通信的技术。 作用：用于视频会议、直播等场景。 应用：Web 环境下的实时通信。 12. FLV（Flash Video） 定义：一种用于网络流媒体的视频容器格式。 特点：适用于早期的网络视频播放。 应用：网络流媒体。 技术关系图 1 2 3 4 5 6 7 MIPI（硬件接口） → 采集图像数据 ↓ FFmpeg（处理工具） → 编码、转码、流处理 ↓ RTSP/RTP（传输协议） → 实时音视频流传输 ↓ MP4/AVI（存储格式） → 存储音视频数据 ">
+<meta name="twitter:description" content="2月 转眼二月份要过去了 前半个月旅游 看了一眼香港、深圳，感慨香港真的好小，深圳真的好大，东西真的好贵，赚钱不容易，这几天就花了3000 4000。\n后半个月要开题答辩，无人机我做不出来，很内耗，和秦老师沟通换了题目，秦老师还给我发钱，实际上我啥都没干啊，祺神比我多一倍，人家干的多。\n3月 转眼3月份到底了，今天是3.24，这个月也啥都没干，但是313发生了一件重要的事情。希望我以后能撑起我和qdx的这个小家，她真的是一个宝藏女孩，千万不能把她弄丢了，又浑浑噩噩了一个月，想想这半年来全在玩我也得振作起来了。\n315开始了，坚持了一周的跑步，带着qdx减肥以及我自己5月份也有一个马拉松，主要是锻炼身体吧，减肥都是次要的我觉得。\n组会汇报了一坨，fcnn太老了，组会似乎不能汇报自己的工作，得汇报一个问题，让曾老师和师兄们帮忙看看 解答解答，得多看文献了而且必须是最新的文献。看文献 我能看懂英文的情况下，就尽量别去看中文了。\n4月 况老师的两个综述作业：人机交互技术、复杂网络理论及其应用 结课小论文 入团申请书 fuck\n第一周 \u200b\t不知道为啥，想写一个小周报了，上周整体来说还行，但是周四到周日清明假期玩了四天，毕设有了个大概的方向，继续这样的节奏吧：科研上第二周继续找一篇论文，继续复现；然后毕设三天内吧，把小车先拼出来，因为4.18就要中期答辩了；集创赛目前4月15左右也得有一个大概的想法了，得开始做了；摩托车驾照也是4.15；然后得减肥了，上周库库吃了好多。不知道一生一芯啥时候能开始啊。\n\u200b\tqdx依旧是个好女孩，她教会了我很多，我成长了很多和她在一起之后，发现了身上很多很多缺点；首当其冲的就是冲动，做事情太急，太浮躁，在她家的那几天，明显感觉自己喜欢甩锅，不从自己身上找原因，喜欢急，干任何事情太急躁，一旦事情脱离自己目标设想的那样立马就开始崩溃 难受，太追求完美。\n\u200b\t经济上，最近真的穷，在思考租到7月份就不租了，实在是扛不住\n第二周+第三周部分 科研上：就做红外可见光融合了参考知乎up主星辰的回答:\n1 我觉得博士不应该考虑有没有前途，而是好不好毕业，博士毕业主要是发的小论文，要有多少篇二区及以上。目前这个领域稍微有些卷了，没前两年那么容易水一二区了，要想发一二区，也得有大量的实验和足够的创新性，我觉得上手起来还是比大部分任务要简单的。就算你不做这个方向，这个方向的很多新论文的方法和思想也可以给其他视觉任务启发。 2.博士主要是4到5个研究点，分别对应4到5篇小论文，最好有所规划，比如说AE、CNN、GAN、Transformer架构分别来一篇，研究点也最好往不同架构的特点考虑。比如说AE可以跟迁移学习结合，或者研究更有效的融合策略。CNN考虑更轻量级网络模型设计。GAN考虑其他类型的鉴别器。Transformer和mamba也可以考虑轻量级网络方面，更符合的没想到。还有联合免配准、低光增强、去雨去雾去噪等前置任务，还可以联合目标检测、语义分割、深度检测、边缘检测等后续任务，来做多任务融合。其他的多看看别的任务，还有啥启发。还可以做图像融合统一架构(红外与可见光，医学图像，多聚焦图像，多曝光图像，偏振图像等) 3.先从综述论文开始看，然后收集现有的开源代码和数据集和评价指标代码。 先看github项目：https://github.com/RollingPlain/IVIF_ZOO.的paper\n结合博客图像融合论文及代码整理最全大合集-CSDN博客去复现论文\n感情上，感觉越来越离不开qdx了，和她一起抱着睡觉很舒服，晚上回出租屋发现她不在的时候真的很空虚\n毕设：上周玩了好几天，周四周五周六周日都在玩，但是把小车做出来了，接下来就是通信问题，能否让算能和小车通信（想做一个怎样的联合任务？通信了之后做什么？）这是目前主要的。\n秦老师说要努力，博士毕业要六篇论文，3sci+3篇差一些的文章，得努力啊，一周上七天班吧。\n不过摩托车证考过了，很爽哈哈，但是不想骑摩托了，太累 而且太危险，当务之急是如何毕业，而不是这些东西了，不能再想开车了，得收收心\n">
     <link rel="shortcut icon" href="/imgs/icons/favicon.ico" />
 
     </head>
@@ -247,19 +247,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1-mipimobile-industry-processor-interface">1. MIPI（Mobile Industry Processor Interface）</a></li>
-    <li><a href="#2-rtspreal-time-streaming-protocol">2. RTSP（Real-Time Streaming Protocol）</a></li>
-    <li><a href="#3-ffmpeg">3. FFmpeg</a></li>
-    <li><a href="#4-mp4mpeg-4-part-14">4. MP4（MPEG-4 Part 14）</a></li>
-    <li><a href="#5-aviaudio-video-interleave">5. AVI（Audio Video Interleave）</a></li>
-    <li><a href="#6-h264h265">6. H.264/H.265</a></li>
-    <li><a href="#7-onvifopen-network-video-interface-forum">7. ONVIF（Open Network Video Interface Forum）</a></li>
-    <li><a href="#8-rtpreal-time-transport-protocol">8. RTP（Real-time Transport Protocol）</a></li>
-    <li><a href="#9-hdmihigh-definition-multimedia-interface">9. HDMI（High-Definition Multimedia Interface）</a></li>
-    <li><a href="#10-gstreamer">10. GStreamer</a></li>
-    <li><a href="#11-webrtcweb-real-time-communication">11. WebRTC（Web Real-Time Communication）</a></li>
-    <li><a href="#12-flvflash-video">12. FLV（Flash Video）</a></li>
-    <li><a href="#技术关系图">技术关系图</a></li>
+    <li><a href="#科研基础">科研基础</a></li>
   </ol>
 </nav>
         </div>
@@ -318,101 +306,14 @@
     <section class="article-content">
     
     
-    <h1 id="多媒体相关技术总结">多媒体相关技术总结
-</h1><h2 id="1-mipimobile-industry-processor-interface">1. MIPI（Mobile Industry Processor Interface）
-</h2><ul>
-<li><strong>定义</strong>：一组用于移动设备的硬件接口标准。</li>
-<li><strong>作用</strong>：主要用于摄像头（CSI）、显示屏（DSI）等设备的连接。</li>
-<li><strong>应用</strong>：智能手机、平板电脑等移动设备。</li>
+    <h2 id="科研基础">科研基础
+</h2><p>成像方面：</p>
+<ul>
+<li>曝光<a class="link" href="https://www.zhihu.com/question/20575139/answer/3103609248"  target="_blank" rel="noopener"
+    >(4 封私信 / 4 条消息) 摄影技术里的曝光是什么意思？ - 知乎</a></li>
 </ul>
-<h2 id="2-rtspreal-time-streaming-protocol">2. RTSP（Real-Time Streaming Protocol）
-</h2><ul>
-<li><strong>定义</strong>：一种网络流媒体传输协议。</li>
-<li><strong>作用</strong>：用于控制实时音视频流的传输（如播放、暂停、快进）。</li>
-<li><strong>应用</strong>：视频监控、直播等场景。</li>
-</ul>
-<h2 id="3-ffmpeg">3. FFmpeg
-</h2><ul>
-<li><strong>定义</strong>：开源的多媒体处理框架。</li>
-<li><strong>作用</strong>：支持音视频的编解码、转码、流媒体处理等。</li>
-<li><strong>工具</strong>：<code>ffmpeg</code>（命令行工具）、<code>ffplay</code>（播放器）、<code>ffprobe</code>（分析工具）。</li>
-</ul>
-<h2 id="4-mp4mpeg-4-part-14">4. MP4（MPEG-4 Part 14）
-</h2><ul>
-<li><strong>定义</strong>：一种常见的音视频容器格式。</li>
-<li><strong>特点</strong>：支持多种编码格式（如 H.264、AAC），文件体积较小。</li>
-<li><strong>应用</strong>：视频文件、流媒体等。</li>
-</ul>
-<h2 id="5-aviaudio-video-interleave">5. AVI（Audio Video Interleave）
-</h2><ul>
-<li><strong>定义</strong>：一种较老的音视频容器格式。</li>
-<li><strong>特点</strong>：兼容性较好，但文件体积通常较大。</li>
-<li><strong>应用</strong>：早期视频存储。</li>
-</ul>
-<h2 id="6-h264h265">6. H.264/H.265
-</h2><ul>
-<li><strong>定义</strong>：视频编码标准。</li>
-<li><strong>作用</strong>：压缩视频数据，减少文件体积，保持高画质。</li>
-<li><strong>应用</strong>：广泛应用于视频编码。</li>
-</ul>
-<h2 id="7-onvifopen-network-video-interface-forum">7. ONVIF（Open Network Video Interface Forum）
-</h2><ul>
-<li><strong>定义</strong>：一种网络视频设备的标准协议。</li>
-<li><strong>作用</strong>：实现不同厂商的网络摄像头和视频管理系统的互操作性。</li>
-<li><strong>应用</strong>：视频监控。</li>
-</ul>
-<h2 id="8-rtpreal-time-transport-protocol">8. RTP（Real-time Transport Protocol）
-</h2><ul>
-<li><strong>定义</strong>：一种用于实时音视频数据传输的协议。</li>
-<li><strong>作用</strong>：通常与 RTSP 配合使用，RTSP 负责控制，RTP 负责传输。</li>
-<li><strong>应用</strong>：实时音视频流传输。</li>
-</ul>
-<h2 id="9-hdmihigh-definition-multimedia-interface">9. HDMI（High-Definition Multimedia Interface）
-</h2><ul>
-<li><strong>定义</strong>：一种高清音视频接口标准。</li>
-<li><strong>作用</strong>：用于连接显示器、电视等设备，传输高清音视频信号。</li>
-<li><strong>应用</strong>：消费电子设备。</li>
-</ul>
-<h2 id="10-gstreamer">10. GStreamer
-</h2><ul>
-<li><strong>定义</strong>：开源的多媒体处理框架。</li>
-<li><strong>作用</strong>：支持音视频的采集、处理、播放等。</li>
-<li><strong>应用</strong>：多媒体处理，可替代 FFmpeg。</li>
-</ul>
-<h2 id="11-webrtcweb-real-time-communication">11. WebRTC（Web Real-Time Communication）
-</h2><ul>
-<li><strong>定义</strong>：一种支持浏览器实时音视频通信的技术。</li>
-<li><strong>作用</strong>：用于视频会议、直播等场景。</li>
-<li><strong>应用</strong>：Web 环境下的实时通信。</li>
-</ul>
-<h2 id="12-flvflash-video">12. FLV（Flash Video）
-</h2><ul>
-<li><strong>定义</strong>：一种用于网络流媒体的视频容器格式。</li>
-<li><strong>特点</strong>：适用于早期的网络视频播放。</li>
-<li><strong>应用</strong>：网络流媒体。</li>
-</ul>
-<h2 id="技术关系图">技术关系图
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">MIPI（硬件接口） → 采集图像数据
-</span></span><span class="line"><span class="cl">                   ↓
-</span></span><span class="line"><span class="cl">FFmpeg（处理工具） → 编码、转码、流处理
-</span></span><span class="line"><span class="cl">                   ↓
-</span></span><span class="line"><span class="cl">RTSP/RTP（传输协议） → 实时音视频流传输
-</span></span><span class="line"><span class="cl">                   ↓
-</span></span><span class="line"><span class="cl">MP4/AVI（存储格式） → 存储音视频数据
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<p>多头注意力可以看看bilibili一个up手写大模型</p>
+
 </section>
 
 
@@ -526,8 +427,14 @@
         
             
         
-        发表了5篇文章 · 
-        总计2.06k字
+            
+        
+            
+        
+            
+        
+        发表了8篇文章 · 
+        总计2.14k字
     </section>
 
 

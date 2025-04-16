@@ -81,6 +81,31 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;yolov5&#34;&gt;YOLOV5
+&lt;/h2&gt;&lt;p&gt;深度因子应该是放缩卷积模块的数量，宽度因子是放缩通道数&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/chirouo/my_blog_img/main/202503191626369.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250319162602924&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/chirouo/my_blog_img/main/202503191631074.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;yolov5&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Conv，C3，SPPF&lt;/p&gt;
+&lt;p&gt;anchor：[新手也能彻底搞懂的目标检测Anchor是什么？怎么科学设置？&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/112574936&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;附代码] - 知乎&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1684,6 +1709,63 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/p/</guid>
+        <description>&lt;h2 id=&#34;2月&#34;&gt;2月
+&lt;/h2&gt;&lt;p&gt;转眼二月份要过去了
+前半个月旅游 看了一眼香港、深圳，感慨香港真的好小，深圳真的好大，东西真的好贵，赚钱不容易，这几天就花了3000 4000。&lt;/p&gt;
+&lt;p&gt;后半个月要开题答辩，无人机我做不出来，很内耗，和秦老师沟通换了题目，秦老师还给我发钱，实际上我啥都没干啊，祺神比我多一倍，人家干的多。&lt;/p&gt;
+&lt;h2 id=&#34;3月&#34;&gt;3月
+&lt;/h2&gt;&lt;p&gt;转眼3月份到底了，今天是3.24，这个月也啥都没干，但是313发生了一件重要的事情。希望我以后能撑起我和qdx的这个小家，她真的是一个宝藏女孩，千万不能把她弄丢了，又浑浑噩噩了一个月，想想这半年来全在玩我也得振作起来了。&lt;/p&gt;
+&lt;p&gt;315开始了，坚持了一周的跑步，带着qdx减肥以及我自己5月份也有一个马拉松，主要是锻炼身体吧，减肥都是次要的我觉得。&lt;/p&gt;
+&lt;p&gt;组会汇报了一坨，fcnn太老了，组会似乎不能汇报自己的工作，得汇报一个问题，让曾老师和师兄们帮忙看看 解答解答，得多看文献了而且必须是最新的文献。看文献 我能看懂英文的情况下，就尽量别去看中文了。&lt;/p&gt;
+&lt;h2 id=&#34;4月&#34;&gt;4月
+&lt;/h2&gt;&lt;p&gt;况老师的两个综述作业：人机交互技术、复杂网络理论及其应用 结课小论文
+入团申请书 fuck&lt;/p&gt;
+&lt;h3 id=&#34;第一周&#34;&gt;第一周
+&lt;/h3&gt;&lt;p&gt;​	不知道为啥，想写一个小周报了，上周整体来说还行，但是周四到周日清明假期玩了四天，毕设有了个大概的方向，继续这样的节奏吧：科研上第二周继续找一篇论文，继续复现；然后毕设三天内吧，把小车先拼出来，因为4.18就要中期答辩了；集创赛目前4月15左右也得有一个大概的想法了，得开始做了；摩托车驾照也是4.15；然后得减肥了，上周库库吃了好多。不知道一生一芯啥时候能开始啊。&lt;/p&gt;
+&lt;p&gt;​	qdx依旧是个好女孩，她教会了我很多，我成长了很多和她在一起之后，发现了身上很多很多缺点；首当其冲的就是冲动，做事情太急，太浮躁，在她家的那几天，明显感觉自己喜欢甩锅，不从自己身上找原因，喜欢急，干任何事情太急躁，一旦事情脱离自己目标设想的那样立马就开始崩溃 难受，太追求完美。&lt;/p&gt;
+&lt;p&gt;​	经济上，最近真的穷，在思考租到7月份就不租了，实在是扛不住&lt;/p&gt;
+&lt;h3 id=&#34;第二周第三周部分&#34;&gt;第二周+第三周部分
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;科研上：就做红外可见光融合了参考知乎up主&lt;em&gt;星辰&lt;/em&gt;的回答:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我觉得博士不应该考虑有没有前途，而是好不好毕业，博士毕业主要是发的小论文，要有多少篇二区及以上。目前这个领域稍微有些卷了，没前两年那么容易水一二区了，要想发一二区，也得有大量的实验和足够的创新性，我觉得上手起来还是比大部分任务要简单的。就算你不做这个方向，这个方向的很多新论文的方法和思想也可以给其他视觉任务启发。 2.博士主要是4到5个研究点，分别对应4到5篇小论文，最好有所规划，比如说AE、CNN、GAN、Transformer架构分别来一篇，研究点也最好往不同架构的特点考虑。比如说AE可以跟迁移学习结合，或者研究更有效的融合策略。CNN考虑更轻量级网络模型设计。GAN考虑其他类型的鉴别器。Transformer和mamba也可以考虑轻量级网络方面，更符合的没想到。还有联合免配准、低光增强、去雨去雾去噪等前置任务，还可以联合目标检测、语义分割、深度检测、边缘检测等后续任务，来做多任务融合。其他的多看看别的任务，还有啥启发。还可以做图像融合统一架构(红外与可见光，医学图像，多聚焦图像，多曝光图像，偏振图像等) 3.先从综述论文开始看，然后收集现有的开源代码和数据集和评价指标代码。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;先看github项目：https://github.com/RollingPlain/IVIF_ZOO.的paper&lt;/p&gt;
+&lt;p&gt;结合博客&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/fovever_/article/details/124650534&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图像融合论文及代码整理最全大合集-CSDN博客&lt;/a&gt;去复现论文&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;感情上，感觉越来越离不开qdx了，和她一起抱着睡觉很舒服，晚上回出租屋发现她不在的时候真的很空虚&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;毕设：上周玩了好几天，周四周五周六周日都在玩，但是把小车做出来了，接下来就是通信问题，能否让算能和小车通信（想做一个怎样的联合任务？通信了之后做什么？）这是目前主要的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;秦老师说要努力，博士毕业要六篇论文，3sci+3篇差一些的文章，得努力啊，一周上七天班吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不过摩托车证考过了，很爽哈哈，但是不想骑摩托了，太累 而且太危险，当务之急是如何毕业，而不是这些东西了，不能再想开车了，得收收心&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
         <description>&lt;h1 id=&#34;多媒体相关技术总结&#34;&gt;多媒体相关技术总结
 &lt;/h1&gt;&lt;h2 id=&#34;1-mipimobile-industry-processor-interface&#34;&gt;1. MIPI（Mobile Industry Processor Interface）
 &lt;/h2&gt;&lt;ul&gt;
@@ -1779,6 +1861,40 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
+        <description>&lt;h2 id=&#34;cv方向的一些科研灵感&#34;&gt;CV方向的一些科研灵感
+&lt;/h2&gt;&lt;p&gt;轻量化，选择一个具体的应用场景去做轻量化，参考知乎回答&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/608573944/answer/3090447383&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(4 封私信 / 2 条消息) 研一刚结束，图像处理哪个方向比较好做，只想水论文毕业？ - 知乎&lt;/a&gt;，目前像做低级视觉任务 结合 高级视觉任务做一个多任务，然后轻量化这个多任务
+低级图像任务主要关注 &lt;strong&gt;图像本身的像素级处理&lt;/strong&gt;，旨在改善图像质量或从图像中提取更基础的信息。常见的低级图像任务包括：去噪、去雾、低光增强（组里的师兄们做这个也比较多）&lt;/p&gt;
+&lt;p&gt;高级图像任务主要关注 &lt;strong&gt;从图像中提取语义信息&lt;/strong&gt;，理解图像内容，并做出更高层次的决策。常见的高级图像任务包括：识别、检测&lt;/p&gt;
+&lt;p&gt;资料：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/652414246/answer/3461318559&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(4 封私信 / 2 条消息) 控制硕士在读，老板让做多源图像融合，但是他本人不做，我是第一个，现在不知道该如何入门，求大神指导? - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安徽大学李成龙团队和武汉大学马佳义团队&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
+        <description>&lt;h2 id=&#34;科研基础&#34;&gt;科研基础
+&lt;/h2&gt;&lt;p&gt;成像方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;曝光&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/20575139/answer/3103609248&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(4 封私信 / 4 条消息) 摄影技术里的曝光是什么意思？ - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;多头注意力可以看看bilibili一个up手写大模型&lt;/p&gt;
+</description>
         </item>
         
     </channel>
